@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  
+</body>
+
+</html>
+
+  <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazing Squad</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            text-align: center;
+            padding: 20px;
+            border-bottom: 2px solid #F77300;
+        }
+
+        .logo {
+            width: 180px;
+            height: auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+            position: relative;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #F77300;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links a:hover {
+            color: #c55a00;
+        }
+
+        .nav-links a:hover i {
+            transform: scale(1.1);
+        }
+
+        .slogan {
+            text-align: center;
+            padding: 15px;
+            font-style: italic;
+            color: #F77300;
+            border-top: 1px dashed #F77300;
+            margin: 0 20px;
+        }
+
+        /* Animation au scroll */
+        .scrolled {
+            background-color: rgba(255,255,255,0.95);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header"> 
+        <nav>
+            <ul class="nav-links">
+                <li><a href="accueil.html"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="evenement.html"><i class="fas fa-calendar-alt"></i> Événements</a></li>
+                <li><a href="rubrique.html"><i class="fas fa-book-open"></i> Rubrique</a></li>
+                <li><a href="Archives.html"><i class="fas fa-archive"></i> Archives</a></li>
+                <li><a href="biographies.html"><i class="fas fa-user-friends"></i> Biographie</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="slogan">
+            <h3>Une équipe, une vision, un impact</h3>
+        </div>
+    </header>
+
+    <script>
+        // Effet au scroll
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Animation au survol des icônes
+        document.querySelectorAll('.nav-links i').forEach(icon => {
+            icon.style.transition = 'transform 0.3s ease';
+        });
+    </script>
+</body>
+</html>
+  
+  
+  <section class="birthday-section">
+    <div class="birthday-header">
+        <h2><i class="fas fa-birthday-cake"></i> Anniversaire du mois</h2>
+        <div class="celebration-tag">Joyeux Anniversaire !</div>
+    </div>
+
+    <div class="birthday-container">
+        <div class="profile-card">
+            <div class="photo-frame">
+                <img src="fete.jpg" alt="Fane" class="profile-img">
+                <div class="decorations">
+                    <i class="fas fa-sparkles"></i>
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-sparkles"></i>
+                </div>
+            </div>
+            <div class="birthday-details">
+                <h3 class="celebrant-name">Ritz Fane FARO
+                    <span class="age-badge"> <p>20 Mars</p></span>
+                </h3>
+                
+                <div class="profession-box">
+                    <i class="fas fa-paint-brush"></i>
+                    <p>Maquilleuse<br>
+                    <em>"Étudiante en technique laboratoire"</em></p>
+                </div>
+
+                <div class="birthday-message">
+                    <p><i class="fas fa-quote-left"></i> Notre rayon de soleil cosmétique ! Toujours prête à embellir nos vues et nos vies.<i class="fas fa-quote-right"></i></p>
+                </div>
+
+                <div class="birthday-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-gift"></i>
+                        <span class="stat-number" id="giftCount">0</span>
+                        Cadeaux virtuels
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-heart"></i>
+                        <span class="stat-number" id="wishCount">0</span>
+                        Vœux reçus
+                    </div>
+                </div>
+
+                <div class="interaction-buttons">
+                    <button class="wish-btn" onclick="sendWish()">
+                        <i class="fas fa-hands-praying"></i> Envoyer un vœu
+                    </button>
+                    <button class="gift-btn" onclick="sendGift()">
+                        <i class="fas fa-gift"></i> Offrir un cadeau
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Styles spécifiques à la section anniversaire */
+.birthday-section {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: linear-gradient(135deg, #fff 85%, #fff6e5 100%);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(247, 115, 0, 0.15);
+    padding: 30px;
+    border: 3px solid #F77300;
+    position: relative;
+}
+
+.birthday-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 3px dotted #F77300;
+}
+
+.celebration-tag {
+    background: #F77300;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-size: 1.1em;
+    animation: pulse 2s infinite;
+}
+
+.profile-card {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.photo-frame {
+    position: relative;
+    border: 5px solid #F77300;
+    border-radius: 20px;
+    padding: 15px;
+    background: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.profile-img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.decorations {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    font-size: 1.5em;
+    color: #F77300;
+}
+
+.celebrant-name {
+    color: #F77300;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.age-badge {
+    font-size: 0.6em;
+    vertical-align: middle;
+    margin-left: 15px;
+}
+
+.profession-box {
+    background: rgba(247, 115, 0, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 2px dashed #F77300;
+}
+
+.birthday-message {
+    font-style: italic;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    position: relative;
+    margin: 20px 0;
+    border: 2px solid #F77300;
+}
+
+.birthday-message i {
+    color: #F77300;
+    font-size: 1.2em;
+}
+
+.birthday-stats {
+    display: flex;
+    gap: 30px;
+    margin: 25px 0;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    flex: 1;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2em;
+    color: #F77300;
+    font-weight: bold;
+}
+
+.interaction-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.wish-btn, .gift-btn {
+    flex: 1;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.wish-btn {
+    background: #F77300;
+    color: white;
+}
+
+.gift-btn {
+    background: white;
+    color: #F77300;
+    border: 2px solid #F77300;
+}
+
+.wish-btn:hover {
+    background: #c55a00;
+    transform: translateY(-2px);
+}
+
+.gift-btn:hover {
+    background: #F77300;
+    color: white;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+    .profile-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .decorations {
+        top: -15px;
+    }
+    
+    .interaction-buttons {
+        flex-direction: column;
+    }
+}
+</style>
+
+<script>
+let wishes = 0;
+let gifts = 0;
+
+function sendWish() {
+    wishes++;
+    document.getElementById('wishCount').textContent = wishes;
+    animateStat('wishCount');
+}
+
+function sendGift() {
+    gifts++;
+    document.getElementById('giftCount').textContent = gifts;
+    animateStat('giftCount');
+}
+
+function animateStat(elementId) {
+    const element = document.getElementById(elementId);
+    element.style.transform = 'scale(1.5)';
+    setTimeout(() => {
+        element.style.transform = 'scale(1)';
+    }, 300);
+}
+
+// Animation au survol de la photo
+document.querySelector('.profile-img').addEventListener('mouseover', function() {
+    this.style.transform = 'rotate(-2deg) scale(1.03)';
+});
+
+document.querySelector('.profile-img').addEventListener('mouseout', function() {
+    this.style.transform = 'rotate(0) scale(1)';
+});
+</script>
+  
+  
+  <section class="rubriques-section">
+    <div class="section-header">
+        <h2><i class="fas fa-layer-group"></i> Nos Rubriques</h2>
+        <p class="section-subtitle">Découvrez nos espaces thématiques</p>
+    </div>
+
+    <div class="rubriques-grid">
+        <!-- Rubrique 1 -->
+        <div class="rubrique-card">
+            <div class="rubrique-image">
+                <img src="deba.jpg" alt="Rubrique Débats">
+                <div class="rubrique-tag">Nouveau</div>
+            </div>
+            <div class="rubrique-content">
+                <h3><i class="fas fa-comments"></i> Lundi Débats</h3>
+                <p>Bienvenue dans la rubrique "Lundi Débat" !
+Chaque lundi soir, de 9h à 10h du soir , retrouvons-nous pour échanger, partager et débattre sur des sujets variés et captivants.
+Au programme : discussions ouvertes, idées enrichissantes et respect des opinions de chacun.
+Que vous soyez d'accord ou en désaccord, l'essentiel est de créer un espace de dialogue constructif.
+
+Rejoignez-nous, participez et faites entendre votre voix !
+
+</p>
+                <div class="rubrique-meta">
+                    <span><i class="fas fa-users"></i> Plus de 150 membre</span>
+                    <span><i class="fas fa-comment-dots"></i>Diverses sujets chaque Lundi</span>
+                </div>
+                <div style="text-align: center; margin: 20px;">
+    <a href="https://chat.whatsapp.com/JHLvZE1Bb58CvzHgErvccC" target="_blank" style="text-decoration: none;">
+        <button style="background-color: #25D366; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer;">
+            Rejoindre le groupe WhatsApp
+        </button>
+    </a>
+</div>
+            </div>
+        </div>
+
+        <!-- Rubrique 2 -->
+        <div class="rubrique-card">
+            <div class="rubrique-image">
+                <img src="kiz.jpg" alt="Rubrique Tutoriels">
+                <div class="rubrique-tag">Populaire</div>
+            </div>
+            <div class="rubrique-content">
+                <h3><i class="fas fa-graduation-cap"></i> Mardi QUIZ !</h3>
+                <p>Bienvenue au "Mardi Quiz" sur Amazing Squad !
+Chaque mardi, préparez-vous à tester vos connaissances dans une ambiance fun et conviviale.
+Déroulement :
+
+Une série de questions interactives.
+
+Points attribués pour chaque bonne réponse.
+
+Des thèmes variés pour surprendre chaque semaine.
+
+
+Faites chauffer vos méninges et montrez que vous êtes le roi/la reine du quiz !
+</p>
+                <div class="rubrique-meta">
+                    <span></i>Question pour être Champion</span>
+                    <span><i class="fas fa-star"></i> 4.9/5</span>
+                </div>
+                   <a href="https://chat.whatsapp.com/JHLvZE1Bb58CvzHgErvccC" target="_blank" style="text-decoration: none;">
+        <button style="background-color: #25D366; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer;">
+            Rejoindre le groupe WhatsApp
+        </button>
+    </a>
+            </div>
+        </div>
+
+        <!-- Ajoutez d'autres rubriques selon le même modèle -->
+    </div>
+</section>
+
+<style>
+/* Style général */
+.rubriques-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 3px dashed #F77300;
+    padding-bottom: 20px;
+}
+
+.section-header h2 {
+    color: #F77300;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    color: #666;
+    font-style: italic;
+}
+
+/* Grid des rubriques */
+.rubriques-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Carte de rubrique */
+.rubrique-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.rubrique-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(247, 115, 0, 0.15);
+}
+
+.rubrique-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.rubrique-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.rubrique-card:hover .rubrique-image img {
+    transform: scale(1.05);
+}
+
+.rubrique-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #F77300;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8em;
+}
+
+.rubrique-content {
+    padding: 20px;
+}
+
+.rubrique-content h3 {
+    color: #F77300;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.rubrique-content p {
+    color: #666;
+    min-height: 60px;
+    margin-bottom: 15px;
+}
+
+.rubrique-meta {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    font-size: 0.9em;
+    color: #888;
+}
+
+.rubrique-btn {
+    background: #F77300;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rubrique-btn:hover {
+    background: #c55a00;
+    letter-spacing: 1px;
+}
+
+/* Overlay image */
+.rubrique-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.4) 100%);
+}
+
+@media (max-width: 768px) {
+    .rubriques-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<script>
+// Animation au survol
+document.querySelectorAll('.rubrique-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.querySelector('.rubrique-tag').style.transform = 'rotate(5deg)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.querySelector('.rubrique-tag').style.transform = 'rotate(0)';
+    });
+});
+
+// Interaction au clic
+document.querySelectorAll('.rubrique-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Chargement...';
+        setTimeout(() => {
+            // Redirection ou action ici
+            alert('Rubrique sélectionnée !');
+        }, 1000);
+    });
+});
+</script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <footer style="margin-top: 200px;"> <!-- Espace pour le contenu principal -->
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4><i class="fas fa-info-circle"></i> À propos</h4>
+            <p>Amazing Squad - Groupe WhatsApp dédié à l'innovation et la collaboration depuis 2024.</p>
+            <img src="as.png" alt="Petit logo" class="footer-logo">
+        </div>
+
+        <div class="footer-section">
+            <h4><i class="fas fa-link"></i> Liens rapides</h4>
+            <ul class="footer-links">
+                <li><a href="politique.html"><i class="fas fa-angle-right"></i> Politique de confidentialité</a></li>
+                <li><a href="conditions.html"><i class="fas fa-angle-right"></i> Conditions d'utilisation</a></li>
+                <li><a href="accueil.html"><i class="fas fa-angle-right"></i> Accueil</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4><i class="fas fa-map-marker-alt"></i> Contact</h4>
+            <ul class="contact-info">
+                <li><i class="fas fa-envelope"></i> amazingsquad509@gmail.com</li>
+                <li><i class="fas fa-phone"></i> +509 43 07 8619 - 43 03 1851</li>
+                <li><i class="fas fa-clock"></i> Lun-Ven: 9h-18h</li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4><i class="fas fa-hashtag"></i> Réseaux sociaux</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>© 2024 Amazing Squad - <em>Une équipe, une vision, un impact</em></p>
+    </div>
+</footer>
+
+<style>
+.footer-container {
+    background: #fff;
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    border-top: 3px solid #F77300;
+}
+
+.footer-section {
+    padding: 15px;
+}
+
+.footer-section h4 {
+    color: #F77300;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.footer-links li, .contact-info li {
+    margin: 10px 0;
+    list-style: none;
+}
+
+.footer-links a, .contact-info li {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #F77300;
+    padding-left: 5px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #F77300;
+    font-size: 1.5em;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+}
+
+.copyright {
+    background: #f8f8f8;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #eee;
+}
+
+.footer-logo {
+    width: 100px;
+    margin-top: 15px;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}
+</style>
+
+<script>
+// Animation au survol des icônes sociales
+document.querySelectorAll('.social-icons a').forEach(icon => {
+    icon.addEventListener('mouseover', function() {
+        this.style.color = '#c55a00';
+    });
+    
+    icon.addEventListener('mouseout', function() {
+        this.style.color = '#F77300';
+    });
+});
+
+// Smooth scroll pour les liens
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Project -->
+  <script src="main.js"></script>
+</body>
+</html>

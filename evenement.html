@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  
+</body>
+
+</html>
+  <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazing Squad</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            text-align: center;
+            padding: 20px;
+            border-bottom: 2px solid #F77300;
+        }
+
+        .logo {
+            width: 180px;
+            height: auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+            position: relative;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #F77300;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links a:hover {
+            color: #c55a00;
+        }
+
+        .nav-links a:hover i {
+            transform: scale(1.1);
+        }
+
+        .slogan {
+            text-align: center;
+            padding: 15px;
+            font-style: italic;
+            color: #F77300;
+            border-top: 1px dashed #F77300;
+            margin: 0 20px;
+        }
+
+        /* Animation au scroll */
+        .scrolled {
+            background-color: rgba(255,255,255,0.95);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header"> 
+        <nav>
+            <ul class="nav-links">
+                <li><a href="accueil.html"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="evenement.html"><i class="fas fa-calendar-alt"></i> Événements</a></li>
+                <li><a href="rubrique.html"><i class="fas fa-book-open"></i> Rubrique</a></li>
+                <li><a href="Archives.html"><i class="fas fa-archive"></i> Archives</a></li>
+                <li><a href="biographies.html"><i class="fas fa-user-friends"></i> Biographie</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="slogan">
+            <h3>Une équipe, une vision, un impact</h3>
+        </div>
+    </header>
+
+    <script>
+        // Effet au scroll
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Animation au survol des icônes
+        document.querySelectorAll('.nav-links i').forEach(icon => {
+            icon.style.transition = 'transform 0.3s ease';
+        });
+    </script>
+</body>
+</html>
+  
+  
+  
+  
+  
+  
+    <!-- Ajoutez cette section APRÈS le header et AVANT le footer -->
+<main class="main-content" style="margin-top: 200px; padding: 40px 20px;">
+    <section class="event-section">
+        <div class="event-header">
+            <h2><i class="fas fa-calendar-star"></i> Prochain Événement</h2>
+            <div class="event-tag">Événement phare 2025</div>
+        </div>
+
+        <div class="event-container">
+            <div class="event-poster">
+                <img src="retwouvay.jpg" alt="Affiche Amazing Retrouvailles" class="poster-image">
+                <div class="event-countdown">
+                    <i class="fas fa-clock"></i> J-<span id="countdown">...</span>
+                </div>
+            </div>
+
+            <div class="event-details">
+                <h3 class="event-title">Amazing Retrouvailles <span class="event-price">500 Gdes</span></h3>
+                
+                <div class="event-info">
+                    <p><i class="fas fa-map-pin"></i> <strong>Lieu :</strong> Paradis Village</p>
+                    <p><i class="fas fa-calendar-day"></i> <strong>Date :</strong> 26 Avril 2025</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horaire :</strong> 9h00 AM - 6H PM</p>
+                </div>
+
+                <div class="highlights">
+                    <h4><i class="fas fa-star"></i> Points Forts :</h4>
+                    <ul class="activities-list">
+                        <li><i class="fas fa-chalkboard-teacher"></i> Conférence inspirante</li>
+                        <li><i class="fas fa-trophy"></i> Concours avec prix</li>
+                        <li><i class="fas fa-futbol"></i> Tournoi de football</li>
+                        <li><i class="fas fa-chess-board"></i> Dominos & Jeux de cartes</li>
+                        <li><i class="fas fa-camera-retro"></i> Session photo professionnelle</li>
+                        <li><i class="fas fa-utensils"></i> Barbecue gratuit pour tous</li>
+                    </ul>
+                </div>
+
+                <div class="additional-info">
+                    <p><i class="fas fa-info-circle"></i> Préinscription obligatoire - Places limitées</p>
+                </div>
+
+                <button class="register-btn">
+                    <i class="fas fa-ticket-alt"></i> S'inscrire maintenant
+                </button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<style>
+/* Styles pour la section événement */
+.event-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(247, 115, 0, 0.1);
+    padding: 30px;
+    border: 2px solid #F77300;
+}
+
+.event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px dashed #F77300;
+    padding-bottom: 20px;
+}
+
+.event-tag {
+    background: #F77300;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.9em;
+}
+
+.event-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+}
+
+.event-poster {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.poster-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.event-countdown {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: rgba(247, 115, 0, 0.9);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.event-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event-title {
+    color: #F77300;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.event-price {
+    background: #F77300;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 8px;
+    font-size: 0.7em;
+    margin-left: 15px;
+}
+
+.activities-list {
+    columns: 2;
+    list-style: none;
+    padding: 0;
+}
+
+.activities-list li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.register-btn {
+    background: #F77300;
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s;
+    align-self: flex-start;
+}
+
+.register-btn:hover {
+    background: #c55a00;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(247, 115, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .event-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .activities-list {
+        columns: 1;
+    }
+}
+</style>
+
+<script>
+// Compte à rebours
+const eventDate = new Date('2025-04-26').getTime();
+const countdown = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+    
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    document.getElementById('countdown').innerHTML = days;
+    
+    if (distance < 0) {
+        clearInterval(countdown);
+        document.getElementById('countdown').innerHTML = "Événement terminé";
+    }
+}, 1000);
+
+// Animation au survol de l'affiche
+document.querySelector('.poster-image').addEventListener('mouseover', function() {
+    this.style.transform = 'scale(1.02)';
+});
+
+document.querySelector('.poster-image').addEventListener('mouseout', function() {
+    this.style.transform = 'scale(1)';
+});
+</script>
+  
+    <!-- Ajoutez cette section APRÈS le header et AVANT le footer -->
+<main class="main-content" style="margin-top: 200px; padding: 40px 20px;">
+    <section class="event-section">
+        <div class="event-header">
+            <h2><i class="fas fa-calendar-star"></i> Date création Amazing Squad</h2>
+            <div class="event-tag">Anniversaire Amazing</div>
+        </div>
+
+        <div class="event-container">
+            <div class="event-poster">
+                <img src="fètas.jpg" alt="Affiche Amazing Retrouvailles" class="poster-image">
+
+                </div>
+            </div>
+
+            <div class="event-details">
+                <h3 class="event-title">Anniversaire Amazing  <span class="event-price">19/03/24</span></h3>
+                
+                <div class="event-info">
+                 <b>AMAZING SQUAD -1 AN DEJA ET CE N’EST QUE LE DÉBUT !</b>✨🎉
+<p>
+Aujourd’hui, <b>Amazing Squad</b> célèbre son 1er anniversaire ! 🏆🔥
+Il y a un an, nous avons lancé cette aventure avec un rêve et une vision. Grâce à notre engagement collectif, nous avons accompli beaucoup de choses. Depuis <b> After Stratège, et Anti Stress</br>, jusqu’à devenir <b>Amazing Squad</b>, chaque étape a été essentielle pour construire ce que nous sommes aujourd’hui. 💪🎯🎉
+Merci à Nos Membres, nous ne serions pas là sans vous. Vous avez cru en nous, soutenu nos idées et participé activement à chaque phase de cette aventure. Merci d’avoir été avec nous tout au long de ce chemin ! 🙏💖🌟
+
+ Happy Birthday à Amazing Squad🎁
+Merci à vous tous pour avoir rendu cette aventure possible ! 🎉🎊
+
+#HappyAmazingDay #Célébration
+#1AnDeRéussite #CeNestQueLeDébut
+            </div>
+        </div>
+    </section>
+</main>
+
+<style>
+/* Styles pour la section événement */
+.event-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(247, 115, 0, 0.1);
+    padding: 30px;
+    border: 2px solid #F77300;
+}
+
+.event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px dashed #F77300;
+    padding-bottom: 20px;
+}
+
+.event-tag {
+    background: #F77300;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.9em;
+}
+
+.event-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+}
+
+.event-poster {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.poster-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.event-countdown {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: rgba(247, 115, 0, 0.9);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.event-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event-title {
+    color: #F77300;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.event-price {
+    background: #F77300;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 8px;
+    font-size: 0.7em;
+    margin-left: 15px;
+}
+
+.activities-list {
+    columns: 2;
+    list-style: none;
+    padding: 0;
+}
+
+.activities-list li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.register-btn {
+    background: #F77300;
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s;
+    align-self: flex-start;
+}
+
+.register-btn:hover {
+    background: #c55a00;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(247, 115, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .event-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .activities-list {
+        columns: 1;
+    }
+}
+</style>
+
+<script>
+// Compte à rebours
+const eventDate = new Date('2025-04-26').getTime();
+const countdown = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+    
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    document.getElementById('countdown').innerHTML = days;
+    
+    if (distance < 0) {
+        clearInterval(countdown);
+        document.getElementById('countdown').innerHTML = "Événement terminé";
+    }
+}, 1000);
+
+// Animation au survol de l'affiche
+document.querySelector('.poster-image').addEventListener('mouseover', function() {
+    this.style.transform = 'scale(1.02)';
+});
+
+document.querySelector('.poster-image').addEventListener('mouseout', function() {
+    this.style.transform = 'scale(1)';
+});
+</script>
+  
+  
+    <!-- Ajoutez cette section APRÈS le header et AVANT le footer -->
+<main class="main-content" style="margin-top: 200px; padding: 40px 20px;">
+    <section class="event-section">
+        <div class="event-header">
+            <h2><i class="fas fa-calendar-star"></i> Fête Stratège Group</h2>
+            <div class="event-tag">Événement</div>
+        </div>
+
+        <div class="event-container">
+            <div class="event-poster">
+                <img src="sg.jpg" alt="Affiche Amazing Retrouvailles" class="poster-image">
+
+                </div>
+            </div>
+
+            <div class="event-details">
+                <h3 class="event-title">Stratège Group  <span class="event-price">03/02/22</span></h3>
+                
+                <div class="event-info">
+                    <b>Amazing Squad</b> tient à adresser ses plus sincères félicitations à Stratège Group à l’occasion de son troisième anniversaire. 🎉
+Depuis sa création le 03 février, cette association a su démontrer une vision stratégique exceptionnelle et un engagement sans faille envers l’excellence. Nous saluons le parcours inspirant de cette équipe et lui souhaitons encore de nombreuses années de succès et d’impact positif.
+
+Que cette nouvelle année soit synonyme de croissance, d’innovations et de réalisations remarquables.
+Joyeux Anniversaire, Stratège Group ! 🏆👏
+            </div>
+        </div>
+    </section>
+</main>
+
+<style>
+/* Styles pour la section événement */
+.event-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(247, 115, 0, 0.1);
+    padding: 30px;
+    border: 2px solid #F77300;
+}
+
+.event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px dashed #F77300;
+    padding-bottom: 20px;
+}
+
+.event-tag {
+    background: #F77300;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.9em;
+}
+
+.event-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+}
+
+.event-poster {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.poster-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.event-countdown {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: rgba(247, 115, 0, 0.9);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.event-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event-title {
+    color: #F77300;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.event-price {
+    background: #F77300;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 8px;
+    font-size: 0.7em;
+    margin-left: 15px;
+}
+
+.activities-list {
+    columns: 2;
+    list-style: none;
+    padding: 0;
+}
+
+.activities-list li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.register-btn {
+    background: #F77300;
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s;
+    align-self: flex-start;
+}
+
+.register-btn:hover {
+    background: #c55a00;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(247, 115, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .event-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .activities-list {
+        columns: 1;
+    }
+}
+</style>
+
+<script>
+// Compte à rebours
+const eventDate = new Date('2025-04-26').getTime();
+const countdown = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+    
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    document.getElementById('countdown').innerHTML = days;
+    
+    if (distance < 0) {
+        clearInterval(countdown);
+        document.getElementById('countdown').innerHTML = "Événement terminé";
+    }
+}, 1000);
+
+// Animation au survol de l'affiche
+document.querySelector('.poster-image').addEventListener('mouseover', function() {
+    this.style.transform = 'scale(1.02)';
+});
+
+document.querySelector('.poster-image').addEventListener('mouseout', function() {
+    this.style.transform = 'scale(1)';
+});
+</script>
+  
+  
+  
+      <!-- Ajoutez cette section APRÈS le header et AVANT le footer -->
+<main class="main-content" style="margin-top: 200px; padding: 40px 20px;">
+    <section class="event-section">
+        <div class="event-header">
+            <h2><i class="fas fa-calendar-star"></i> Journée International Femme</h2>
+            <div class="event-tag">Événement</div>
+        </div>
+
+        <div class="event-container">
+            <div class="event-poster">
+                <img src="8mas.jpg" alt="Affiche Amazing Retrouvailles" class="poster-image">
+
+                </div>
+            </div>
+
+            <div class="event-details">
+                <h3 class="event-title">Droit de la Femme<span class="event-price">8 Mars</span></h3>
+                
+                <div class="event-info">
+<b>Aujourd’hui, nous célébrons la force, la résilience et la beauté des femmes du monde entier. Chaque femme incarne le courage, la détermination et l’amour qui transforment notre société jour après jour.
+
+Cette journée est l’occasion de reconnaître vos *luttes*, vos victoires et vos rêves. Vos actions méritent d’être entendues et honorées, non seulement aujourd’hui, mais chaque jour.
+
+En ce 8 mars, nous vous disons merci et vous encourageons à continuer d’avancer, à poursuivre vos passions et à laisser votre empreinte dans ce *monde*.
+
+Bonne fête à toutes les femmes!🥳
+
+#AmazingSquad#ModèleHannah
+#JournéeInternationaleDeLaFemme </b>
+            </div>
+        </div>
+    </section>
+</main>
+
+<style>
+/* Styles pour la section événement */
+.event-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(247, 115, 0, 0.1);
+    padding: 30px;
+    border: 2px solid #F77300;
+}
+
+.event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px dashed #F77300;
+    padding-bottom: 20px;
+}
+
+.event-tag {
+    background: #F77300;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.9em;
+}
+
+.event-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+}
+
+.event-poster {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.poster-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.event-countdown {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: rgba(247, 115, 0, 0.9);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.event-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event-title {
+    color: #F77300;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.event-price {
+    background: #F77300;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 8px;
+    font-size: 0.7em;
+    margin-left: 15px;
+}
+
+.activities-list {
+    columns: 2;
+    list-style: none;
+    padding: 0;
+}
+
+.activities-list li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.register-btn {
+    background: #F77300;
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s;
+    align-self: flex-start;
+}
+
+.register-btn:hover {
+    background: #c55a00;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(247, 115, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .event-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .activities-list {
+        columns: 1;
+    }
+}
+</style>
+
+<script>
+// Compte à rebours
+const eventDate = new Date('2025-04-26').getTime();
+const countdown = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+    
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    document.getElementById('countdown').innerHTML = days;
+    
+    if (distance < 0) {
+        clearInterval(countdown);
+        document.getElementById('countdown').innerHTML = "Événement terminé";
+    }
+}, 1000);
+
+// Animation au survol de l'affiche
+document.querySelector('.poster-image').addEventListener('mouseover', function() {
+    this.style.transform = 'scale(1.02)';
+});
+
+document.querySelector('.poster-image').addEventListener('mouseout', function() {
+    this.style.transform = 'scale(1)';
+});
+</script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <footer style="margin-top: 200px;"> <!-- Espace pour le contenu principal -->
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4><i class="fas fa-info-circle"></i> À propos</h4>
+            <p>Amazing Squad - Groupe WhatsApp dédié à l'innovation et la collaboration depuis 2024.</p>
+            <img src="as.png" alt="Petit logo" class="footer-logo">
+        </div>
+
+        <div class="footer-section">
+            <h4><i class="fas fa-link"></i> Liens rapides</h4>
+            <ul class="footer-links">
+                <li><a href="politique.html"><i class="fas fa-angle-right"></i> Politique de confidentialité</a></li>
+                <li><a href="conditions.html"><i class="fas fa-angle-right"></i> Conditions d'utilisation</a></li>
+                <li><a href="accueil.html"><i class="fas fa-angle-right"></i> Accueil</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4><i class="fas fa-map-marker-alt"></i> Contact</h4>
+            <ul class="contact-info">
+                <li><i class="fas fa-envelope"></i> amazingsquad509@gmail.com</li>
+                <li><i class="fas fa-phone"></i> +509 43 07 8619 - 43 03 1851</li>
+                <li><i class="fas fa-clock"></i> Lun-Ven: 9h-18h</li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4><i class="fas fa-hashtag"></i> Réseaux sociaux</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>© 2024 Amazing Squad - <em>Une équipe, une vision, un impact</em></p>
+    </div>
+</footer>
+
+<style>
+.footer-container {
+    background: #fff;
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    border-top: 3px solid #F77300;
+}
+
+.footer-section {
+    padding: 15px;
+}
+
+.footer-section h4 {
+    color: #F77300;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.footer-links li, .contact-info li {
+    margin: 10px 0;
+    list-style: none;
+}
+
+.footer-links a, .contact-info li {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #F77300;
+    padding-left: 5px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #F77300;
+    font-size: 1.5em;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+}
+
+.copyright {
+    background: #f8f8f8;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #eee;
+}
+
+.footer-logo {
+    width: 100px;
+    margin-top: 15px;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}
+</style>
+
+<script>
+// Animation au survol des icônes sociales
+document.querySelectorAll('.social-icons a').forEach(icon => {
+    icon.addEventListener('mouseover', function() {
+        this.style.color = '#c55a00';
+    });
+    
+    icon.addEventListener('mouseout', function() {
+        this.style.color = '#F77300';
+    });
+});
+
+// Smooth scroll pour les liens
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Project -->
+  <script src="main.js"></script>
+</body>
+</html>
